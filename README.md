@@ -46,7 +46,7 @@ $ docker build -t ss:v1 ./
 
 5，启动容器
 ```bash
-# docker run  -p  3307:3307/udp -p 53:53 -p 18203:18203 ss:v1
+# docker run -d -p 3307:3307/udp -p 53:53 -p 18203:18203 ss:v1
 ```
 
 6，客户端使用
@@ -54,5 +54,5 @@ $ docker build -t ss:v1 ./
 	6.1 普通客户端直接使用53号端口
 	6.2 kcptun使用udp 3307默认配置--key 123456 --crypt aes-128 --mode fast2，修改ss/supervisor.d/kcptun.ini
 	6.3 命令行使用 # echo "http_proxy=http://公网IP:18203 https_proxy=http://公网IP:18203 $*" > /usr/local/bin/proxy ;chmod +x /usr/local/bin/proxy
-		测试是否正常$ proxy curl linyy.ml/ip 返回上面配置的公网IP为正常
+	    测试是否正常$ proxy curl linyy.ml/ip 返回上面配置的公网IP为正常
 ```
