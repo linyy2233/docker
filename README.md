@@ -10,7 +10,7 @@ git clone https://github.com/linyy2233/docker.git
 2，修改shadowsocks server密码和加密方式
 ```bash
 $ cd docker
-$ vim vim ss/program/ss/config.json
+$ vim  ss/program/ss/config.json
 {
     "server":"0.0.0.0",
     "server_port":53,
